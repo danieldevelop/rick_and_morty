@@ -1,0 +1,62 @@
+.card {
+    text-align: center;
+    background-color: #f1f1f1;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+
+
+.card__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__headName, .card__headBoton {
+    margin: .4rem;
+}
+
+.card__headName {
+    font-weight: 600;
+    color: #FFF;
+    background: #575f60be;
+    padding: 0 .3rem;
+    border-radius: 5px;
+}
+
+.card__headBoton {
+    background-color: #302E3E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: .3s all eas
+}
+
+.card__headBoton:hover {
+    background-color: #3f3c52;
+}
+
+
+
+.card__peopleIMG {
+    width: 230px;
+}
+
+
+
+.card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 .6rem;
+}
+
+.card__infoSpecies, .card__infoGender {
+    font-weight: 600;
+    color: #1b1a1a;
+    font-size: 14px;
+}

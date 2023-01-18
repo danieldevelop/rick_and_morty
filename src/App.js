@@ -1,25 +1,62 @@
-import logo from './logo.svg';
 import './App.css';
+import Cards from './components/Cards/Cards.jsx'
+import Nav from './components/Nav/Nav.jsx'
+import { useState } from 'react';
 
-function App() {
+function App () {
+  const [characters, setCharacters] = useState([
+    // Data de prueba inicial
+    // {
+    //   name: 'Morty Smith',
+    //   species: 'Human',
+    //   gender: 'Male',
+    //   image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'
+    // }
+  ]);
+
+  const onSearch = (character) => {
+    fetch(`https://rickandmortyapi.com/api/character/${character}`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.name) {
+          setCharacters((oldChars) => [...oldChars, data]);
+        } else {
+          window.alert('No hay personajes con ese ID');
+        }
+      });
+  }
+
+  const onClose = (id) => {
+    setCharacters([
+      characters.filter((character) => character.id !== id)
+    ]);
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <> {/* si o si lo tengo que poner para segmentar el html */}
+      <header className="head">
+        <div className='container'>
+          <Nav onSearch={onSearch}/>
+        </div>
       </header>
-    </div>
-  );
+
+
+      <main>
+        <div className='container'>
+
+          <section>
+            <Cards characters={characters} onClose={onClose} />
+          </section>
+        </div>
+      </main>
+
+
+      <footer>
+        <p>Hecho con ❤️ por <a href="https://danieldevelop.github.io/" target="_blank">Daniel Gómez</a></p>
+      </footer>
+    </>
+  )
 }
 
-export default App;
+export default App
