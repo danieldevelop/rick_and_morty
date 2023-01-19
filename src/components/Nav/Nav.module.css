@@ -9,3 +9,30 @@
     font-weight: normal;
     font-style: italic;
 }
+
+.head__group {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 1rem;
+}
+
+.head__contentButton {
+    background: #4B809B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: fit-content;
+    padding: .5rem 1rem;
+    letter-spacing: .1rem;
+    transition: .2s all ease;
+
+    /* Estilos para el icono */
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+.head__contentButton:hover {
+    background: #3B6F8B;
+}
