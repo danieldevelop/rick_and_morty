@@ -1,14 +1,6 @@
 import estilo from './Card.module.css';
 
-const Card = (props) => {
-   const {
-      name, 
-      species, 
-      gender, 
-      image, 
-      onClose
-   } = props // destructuring
-
+const Card = ({name, species, gender, image, onClose}) => {
    return (
       <div className={estilo.card}>
          <section className={estilo.card__head}>
@@ -17,7 +9,7 @@ const Card = (props) => {
          </section>
 
          <section>
-            <img  src={image} alt="rick and martin" className={estilo.card__peopleIMG}/>
+            <img  src={image} alt={name} className={estilo.card__peopleIMG}/>
          </section>
 
          <section className={estilo.card__info}>
