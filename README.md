@@ -2,7 +2,7 @@
 
 Mini proyecto en desarrollo de bootcamp Soy Henry.
 
-https://user-images.githubusercontent.com/51731637/213333493-681e3fea-e1d1-487e-bd95-65d5ae526f85.mp4
+![app-rick_and_morty](https://user-images.githubusercontent.com/51731637/213334401-45f8c545-1ce0-4199-a36c-487c009bdd03.gif)
 
 
 ## Despliegue
