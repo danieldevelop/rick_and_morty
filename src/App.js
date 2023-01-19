@@ -15,19 +15,30 @@ function App () {
         } else {
           window.alert('No existe personaje con ese ID');
         }
-    });
+    })
   }
+
 
   const onClose = (id) => {
     setCharacters(characters.filter((character) => character.id !== id));
   }
+
+  const handleRandomPersonaje = () => {
+    fetch('https://rickandmortyapi.com/api/character/')
+    .then((response) => response.json())
+    .then((data) => {
+      const random = Math.floor(Math.random() * data.results.length);
+      setCharacters((oldChars) => [...oldChars, data.results[random]]);
+    });
+  }
+
 
 
   return (
     <> {/* si o si lo tengo que poner para segmentar el html */}
       <header className="head">
         <div className='container'>
-          <Nav onSearch={onSearch}/>
+          <Nav onSearch={onSearch} handleRandomPersonaje={handleRandomPersonaje}/>
         </div>
       </header>
 
