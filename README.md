@@ -1,6 +1,9 @@
 # React App Rick and Morty
 
-Mini proyecto en desarrollo de bootcamp Soy Henry.
+Mini proyecto en desarrollo de bootcamp Soy Henry, aún el proyecto no esta completo ya que
+no le faltan algunas acciones por desarrollar.
+
+> Note: `ESTE APP TODAVIA ESTA EN DESARROLLO`.
 
 ![app-rick_and_morty](https://user-images.githubusercontent.com/51731637/213334401-45f8c545-1ce0-4199-a36c-487c009bdd03.gif)
 
