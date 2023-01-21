@@ -1,7 +1,23 @@
+/**
+ * Información del proyecto, continuacion de la Integracion:
+ *  Module 2: FT34a
+ *  Lectures:
+ *    06-React-Intro
+ *    07-React-Estilos
+ *    08-React-Estado-LifeCycle
+ *    09-React-Rounting
+ *    10-React-Forms (No completado en esta app)
+ *    12-React-Redux (No completado en esta app)
+ */
+
+
 import './App.css';
 import Cards from './components/Cards/Cards.jsx'
 import Nav from './components/Nav/Nav.jsx'
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom'
+import About from "./components/About/About";
+import Error404 from "./components/Error/Error404";
 
 function App () {
   const [characters, setCharacters] = useState([]);
@@ -46,7 +62,12 @@ function App () {
       <main>
         <div className='container'>
           <section>
-            <Cards characters={characters} onClose={onClose} />
+            <Routes>
+              <Route path='/' element={<Cards characters={characters} onClose={onClose} />} />
+              <Route path="/about" element={<About />}>Sobre mí</Route>
+
+              <Route path=":error" element={<Error404 />}/>
+            </Routes>
           </section>
         </div>
       </main>
