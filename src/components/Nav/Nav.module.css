@@ -8,6 +8,20 @@
     margin: 0;
     font-weight: normal;
     font-style: italic;
+    color: #fff;
+    cursor: default;
+}
+
+.head__nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.head__contentAbout {
+    color: #fff;
+    text-decoration: none;
+    cursor: default;
 }
 
 .head__group {
