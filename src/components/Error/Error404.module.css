@@ -1,0 +1,25 @@
+.container {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.errorType {
+    color: #fff;
+    margin: 0;
+    font-weight: 600;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.errorLegend {
+    color: #e7e983;
+    margin: 0;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.errorDescription {
+    color: #fff;
+    text-align: center;
+}
