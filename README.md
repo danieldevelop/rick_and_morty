@@ -5,7 +5,7 @@ no le faltan algunas acciones por desarrollar.
 
 > Note: `ESTE APP TODAVIA ESTA EN DESARROLLO`.
 
-![app-rick_and_morty](https://user-images.githubusercontent.com/51731637/213334401-45f8c545-1ce0-4199-a36c-487c009bdd03.gif)
+![app-rick_and_morty](https://user-images.githubusercontent.com/51731637/213840341-caba8eee-f67c-47af-9628-8e2bd2b52a02.gif)
 
 
 ## Despliegue
