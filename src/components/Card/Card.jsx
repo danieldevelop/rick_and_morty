@@ -1,10 +1,13 @@
 import estilo from './Card.module.css';
+import { Link } from "react-router-dom";
 
-const Card = ({name, species, gender, image, onClose}) => {
+const Card = ({name, species, gender, image, onClose, id}) => {
    return (
       <div className={estilo.card}>
          <section className={estilo.card__head}>
-            <p className={estilo.card__headName}>{name}</p>
+            <Link to={`detail/${id}`}>
+               <p className={estilo.card__headName}>{name}</p>
+            </Link>
             <button className={estilo.card__headBoton} onClick={onClose}>X</button>
          </section>
 
