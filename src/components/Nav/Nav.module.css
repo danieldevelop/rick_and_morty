@@ -4,24 +4,37 @@
     align-items: center;
 }
 
-.head__contentTitle {
-    margin: 0;
-    font-weight: normal;
-    font-style: italic;
-    color: #fff;
-    cursor: default;
-}
-
 .head__nav {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
+.head__contentTitle_enlace {
+    text-decoration: none;
+}
+
+.head__contentTitle {
+    margin: 0;
+    font-weight: normal;
+    font-style: italic;
+    color: #fff;
+    cursor: default;
+    transition: .3s all ease;
+}
+
+.head__contentTitle:hover {
+    color: #F0F0F0;
+}
+
 .head__contentAbout {
     color: #fff;
     text-decoration: none;
     cursor: default;
+}
+
+.head__contentAbout:hover {
+    text-decoration: underline;
 }
 
 .head__group {
