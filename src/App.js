@@ -18,6 +18,7 @@ import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import About from "./components/About/About";
 import Error404 from "./components/Error/Error404";
+import Detail from "./components/Detail/Detail";
 
 function App () {
   const [characters, setCharacters] = useState([]);
@@ -64,7 +65,8 @@ function App () {
           <section>
             <Routes>
               <Route path='/' element={<Cards characters={characters} onClose={onClose} />} />
-              <Route path="/about" element={<About />}>Sobre mí</Route>
+              <Route path='/about' element={<About />}>Sobre mí</Route>
+              <Route path='detail/:detailId' element={<Detail />} /> // useParams
 
               <Route path=":error" element={<Error404 />}/>
             </Routes>
