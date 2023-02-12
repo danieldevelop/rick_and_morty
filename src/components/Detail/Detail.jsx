@@ -31,7 +31,7 @@ const Detail = () => {
 		<div class={estilo.detailCharacter}>
 			<div class={estilo.btnHomeGroup}>
 				<button type="button" className={estilo.btnHome}>
-					<Link to="/" className={estilo.btnHome_enlace}>Home</Link>
+					<Link to="/home" className={estilo.btnHome_enlace}>Home</Link>
 				</button>
 			</div>
 

@@ -5,7 +5,7 @@ const Card = ({name, species, gender, image, onClose, id}) => {
    return (
       <div className={estilo.card}>
          <section className={estilo.card__head}>
-            <Link to={`detail/${id}`}>
+            <Link to={`/detail/${id}`}> {/* si borro el / no funciona, esto va junto con el /home*/}
                <p className={estilo.card__headName}>{name}</p>
             </Link>
             <button className={estilo.card__headBoton} onClick={onClose}>X</button>
