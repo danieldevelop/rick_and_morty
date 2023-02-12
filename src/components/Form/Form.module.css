@@ -1,0 +1,70 @@
+.form {
+	background-color: rgba(51, 56, 59, .4);
+	margin: 4rem auto;
+	padding: 1rem;
+	border-radius: .5rem;
+	width: 360px;
+}
+
+.form_title:before {
+	content:"\1F510 ";
+}
+
+.form_title {
+	font-weight: 400;
+	text-align: center;
+	margin-top: 0;
+	color: #FFF;
+}
+
+.form_title span {
+	font-style: italic;
+}
+
+.form__group {
+	display: flex;	
+	flex-direction: column;
+	gap: .4rem;
+	overflow: hidden;
+}
+
+.form__group label {
+	color: #fff;
+}
+
+.form__group input[type="text"],
+.form__group input[type="password"] {
+	padding: .4rem .5rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: .5rem;
+}
+
+.form__group input[type="text"]:focus,
+.form__group input[type="password"]:focus {
+	outline: 0;
+}
+
+.form__group p {
+	margin: 0;
+	color: #F4D03F;
+	font-size: 15px;
+}
+
+.form__btn_ingresar {
+	margin-top: 1.5rem;
+	padding: .5rem;
+	text-transform: uppercase;
+	width: 100%;
+	border-radius: 1rem;
+	border: none;
+	background: #3498DB;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+	transition: .3s all ease;
+}
+
+.form__btn_ingresar:hover {
+	background: #2E86C1;
+}
