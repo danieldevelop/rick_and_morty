@@ -6,7 +6,7 @@
  *    07-React-Estilos
  *    08-React-Estado-LifeCycle
  *    09-React-Rounting
- *    10-React-Forms (No completado en esta app)
+ *    10-React-Forms
  *    12-React-Redux (No completado en esta app)
  */
 
@@ -14,14 +14,37 @@
 import './App.css';
 import Cards from './components/Cards/Cards.jsx'
 import Nav from './components/Nav/Nav.jsx'
-import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom'
+import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import About from "./components/About/About";
 import Error404 from "./components/Error/Error404";
 import Detail from "./components/Detail/Detail";
+import Form from "./components/Form/Form";
 
 function App () {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // estado local
   const [characters, setCharacters] = useState([]);
+  const [access, setAccess] = useState(false);
+
+  const usu = "informatica@test.com";
+  const pass = "123456"; // Obligatorio tiene que ser con string
+
+  const login = (userData) => {
+    if (userData.username === usu && userData.password === pass) {
+      setAccess(true);
+      navigate('/home')
+    } else {
+      alert("Usuario y Contraseña incorrectas");
+    }
+  }
+
+
+  useEffect(() => {
+    !access && navigate('/')
+  }, [access]);
 
   const onSearch = (character) => {
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
@@ -53,20 +76,24 @@ function App () {
 
   return (
     <> {/* si o si lo tengo que poner para segmentar el html */}
-      <header className="head">
-        <div className='container'>
-          <Nav onSearch={onSearch} handleRandomPersonaje={handleRandomPersonaje}/>
-        </div>
-      </header>
-
+      { 
+        location.pathname === '/' ? <Form login={login}/>
+        : <header className="head">
+            <div className='container'>
+              <Nav onSearch={onSearch} handleRandomPersonaje={handleRandomPersonaje}/>
+            </div>
+          </header>
+      }
+      
 
       <main>
         <div className='container'>
           <section>
             <Routes>
-              <Route path='/' element={<Cards characters={characters} onClose={onClose} />} />
+              /* / es lo mismo que hacer /home */
+              <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
               <Route path='/about' element={<About />}>Sobre mí</Route>
-              <Route path='detail/:detailId' element={<Detail />} /> // useParams
+              <Route path='/detail/:detailId' element={<Detail />} /> // useParams
 
               <Route path=":error" element={<Error404 />}/>
             </Routes>
