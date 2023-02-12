@@ -63,3 +63,13 @@
 .head__contentButton:hover {
     background: #3B6F8B;
 }
+
+.logout {
+    color: #fff;
+    text-decoration: none;
+    cursor: default;
+}
+
+.logout:hover {
+    text-decoration: underline;
+}
