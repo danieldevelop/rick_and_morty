@@ -10,6 +10,7 @@ const Nav = ({ onSearch, handleRandomPersonaje }) => {
                 {/* Esta etiqueta h1 es el remplazo del Home, y / == Home */}
                 <Link to="/home" className={estilo.head__contentTitle_enlace}><h1 className={estilo.head__contentTitle}>Rick&Morty</h1></Link>
                 <Link to="/about" className={estilo.head__contentAbout}>Sobre mí</Link>
+                <Link to="/favorites" className={estilo.head__contentAbout}>Mis favoritos</Link>
             </div>
 
             <div className={estilo.head__group}>

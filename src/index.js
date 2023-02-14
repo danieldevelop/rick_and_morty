@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import store from './redux/store'
+
+// con esta linea, produces error al compilarlo
+// const root = ReactDOM.document.getElementById('root');
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 )

@@ -7,7 +7,7 @@
  *    08-React-Estado-LifeCycle
  *    09-React-Rounting
  *    10-React-Forms
- *    12-React-Redux (No completado en esta app)
+ *    12-React-Redux
  */
 
 
@@ -20,6 +20,7 @@ import About from "./components/About/About";
 import Error404 from "./components/Error/Error404";
 import Detail from "./components/Detail/Detail";
 import Form from "./components/Form/Form";
+import Favorites from './components/Favorites/Favorites';
 
 function App () {
   const location = useLocation();
@@ -90,10 +91,12 @@ function App () {
         <div className='container'>
           <section>
             <Routes>
-              /* / es lo mismo que hacer /home */
+              {/* / es lo mismo que hacer /home */ }
               <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
               <Route path='/about' element={<About />}>Sobre mí</Route>
-              <Route path='/detail/:detailId' element={<Detail />} /> // useParams
+              <Route path='/detail/:detailId' element={<Detail />} /> {/* useParams */}
+              <Route path='/favorites' element={<Favorites />} />
+
 
               <Route path=":error" element={<Error404 />}/>
             </Routes>
