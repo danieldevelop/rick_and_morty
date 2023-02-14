@@ -28,8 +28,8 @@ const Detail = () => {
 	}, [detailId])
 
 	return(
-		<div class={estilo.detailCharacter}>
-			<div class={estilo.btnHomeGroup}>
+		<div className={estilo.detailCharacter}>
+			<div className={estilo.btnHomeGroup}>
 				<button type="button" className={estilo.btnHome}>
 					<Link to="/home" className={estilo.btnHome_enlace}>Home</Link>
 				</button>
