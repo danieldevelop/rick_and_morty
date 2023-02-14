@@ -41,7 +41,7 @@ const Form = ({ login }) => {
 			</div>
 
 			<div className={estilo.form__group}>
-				<label htmlFor="password" style={{"margin-top": ".8rem"}}>Password:</label>
+				<label htmlFor="password" style={{"marginTop": ".8rem"}}>Password:</label>
 				<input type="password" name="password" id="password" value={userData.password} onChange={handleInputChange}/>
 				{errors.password && <p className={estilo.form_error}>{errors.password}</p>}
 			</div>
